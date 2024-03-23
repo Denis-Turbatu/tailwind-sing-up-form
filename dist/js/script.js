@@ -1,3 +1,4 @@
+// Set image on diffrent viewports
 const image = document.getElementById("img-hero");
 
 window.addEventListener("resize", () => {
@@ -8,4 +9,17 @@ window.addEventListener("resize", () => {
     image.src = "./assets/images/illustration-sign-up-mobile.svg";
     console.log("mobile");
   }
+});
+
+// Save email
+
+const form = document.querySelector("form");
+const emailInput = document.getElementById("email");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Previeni l'invio del form
+
+  const email = emailInput.value;
+  
+  console.log("Email inserita:", email);
 });
