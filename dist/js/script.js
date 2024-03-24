@@ -20,6 +20,10 @@ form.addEventListener("submit", (event) => {
   event.preventDefault(); // Previeni l'invio del form
 
   const email = emailInput.value;
-  
-  console.log("Email inserita:", email);
+
+   const emailSuccessElement = document.getElementById("email-success");
+
+   // Set the innerHTML of the element to the email wrapped in strong tags
+   emailSuccessElement.innerHTML = `<strong>${email}</strong>`;
 });
+

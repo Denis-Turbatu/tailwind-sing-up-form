@@ -7,14 +7,20 @@
     <title>Success!</title>
   </head>
 
-  <body class="text-dark-slate bg-white w-full h-screen min-[1440px]:flex min-[1440px]:justify-center min-[1440px]:items-center">
+  <body class="text-dark-slate bg-white">
     
-    <div>
-        <section>
-            <i class="fa-solid fa-circle-check text-tomato mr-3"></i>
-        </section>
+    <div class="w-full h-screen bg-dark-slate flex justify-center items-center">
+      <div class="max-[375px]:w-full max-[375px]:h-screen bg-white min-[1440px]:w-1/3 flex flex-col justify-between rounded-xl px-12 py-8">
+          <section class="py-8">
+              <i class="fa-sharp fa-solid fa-circle-check text-tomato mr-3 text-6xl"></i>
+              <h1 class="font-bold text-3xl leading-7 my-8">Thanks for subscribing!</h1>
+              <p>A confirmation email has been sent to <strong id="email-success"></strong>. Please open it and click the button inside the confirm your subscription</p>
+          </section>
+          <button class="bg-dark-slate py-3 w-full mb-3 text-white rounded-lg">
+              <a href="./index.html">Dismiss message</a>
+          </button>
+      </div>
     </div>
-
     <!-- custom scripts -->
     <script
       src="https://kit.fontawesome.com/84174ae206.js"
