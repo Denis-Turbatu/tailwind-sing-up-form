@@ -12,18 +12,19 @@ window.addEventListener("resize", () => {
 });
 
 // Save email
+function saveEmail(event) {
+  // Prevent default form submission behavior
+  event.preventDefault();
 
-const form = document.querySelector("form");
-const emailInput = document.getElementById("email");
+  // Get the email value from the input field
+  var email = document.getElementById("email").value;
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Previeni l'invio del form
+  // Check if email is valid (optional)
+  // You can add email validation logic here using regular expressions or libraries
 
-  const email = emailInput.value;
+  // Store the email in Local Storage
+  localStorage.setItem("savedEmail", email);
 
-   const emailSuccessElement = document.getElementById("email-success");
-
-   // Set the innerHTML of the element to the email wrapped in strong tags
-   emailSuccessElement.innerHTML = `<strong>${email}</strong>`;
-});
-
+  // Redirect to success page (you can remove target="_blank" from the button)
+  window.location.href = "success.html";
+}
